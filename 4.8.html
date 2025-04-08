@@ -1,0 +1,56 @@
+</div>/body>
+<script>
+function solve()
+{
+    let a = document.getElementById('a');
+    let b = document.getElementById('b');
+    let c = document.getElementById('b');
+    let err = '';
+    if (isNaN(a.value))
+    {
+        err = 'a is not a number.';
+        b.focus();
+        alert('please enter a number);
+    }
+    else
+{
+    a = parseFloat(a.value)
+    b = parseFloat(b.value)
+    c = parseFloat(c.value)
+}
+if(b === 0)
+{
+    if (c === 0)
+    {
+        err = "any x solves the equation";
+    }
+    else
+    {
+        err = "there is no solution";
+    }
+}
+err = "any x solves the equation";
+}
+else
+{
+    err='x=' +(-c/b);
+}
+}
+else
+{let delta = b**2 - 4*a*c;
+if (delta > 0)
+{
+    err ="x1= " + ((-b + Math.sqrt(delta))/2/a)
+        + "x2=" + ((-b - Math.sqrt(delta))/2/a);
+}
+else if (delta === 0)
+{
+    err = "x = " + (-b/2/a);
+}
+else
+{
+    err = "x1=" + (-b/2/a) + (Math.sqrt(-delta))/2/a) + "i"
+        + "x2=" + (-b/2/a) - (Math.sqrt(-delta))/2/a) + "i";
+}
+
+</script>
